@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Teachers' Day, Ankur Sir! 🧮</title>
+  <meta name="description" content="A modern, fun, and heartfelt Teachers' Day tribute for Ankur Sir." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Canvas Math Background Particles -->
+  <canvas id="math-canvas"></canvas>
+
+  <!-- Navigation / Top Pill -->
+  <header class="top-nav">
+    <div class="nav-brand">
+      <span class="math-badge">∫ f(x) dx</span>
+      <span class="brand-text">Ankur Sir Edition • 2026</span>
+    </div>
+    <div class="nav-actions">
+      <button id="sound-btn" class="icon-btn" title="Toggle Sound Effects" aria-label="Toggle sound effects">
+        <span class="sound-icon">🔇</span>
+        <span class="sound-label">Audio FX: Off</span>
+      </button>
+      <button id="confetti-btn" class="icon-btn pulse-glow" title="Celebrate!" aria-label="Launch confetti celebration">
+        <span>🎉 Celebrate</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <!-- SECTION 1: HERO -->
+    <section id="hero" class="section hero-section">
+      <div class="hero-content">
+        <div class="hero-pill animate-fade-in">
+          <span class="pill-dot"></span>
+          <span>Dedicated to our Maths Maestro • Ankur Sir | From Daksh 📐</span>
+        </div>
+
+        <h1 class="hero-title animate-title">
+          Happy Teachers' Day, <span class="gradient-text">Ankur Sir!</span> 🧮
+        </h1>
+
+        <p class="hero-subtitle animate-fade-up">
+          A small website for the person who somehow manages to make Maths & Trigonometry make sense.
+        </p>
+
+        <!-- Floating Equation Badges -->
+        <div class="hero-tags animate-fade-up-delay">
+          <span class="hero-tag">sin²θ + cos²θ = 1</span>
+          <span class="hero-tag">e<sup>iπ</sup> + 1 = 0</span>
+          <span class="hero-tag">tan(θ) = Real Life Height 🏢</span>
+          <span class="hero-tag">lim (x → ∞)</span>
+          <span class="hero-tag">∑ Respect from Daksh = ∞</span>
+        </div>
+
+        <div class="hero-cta-group animate-fade-up-delay-2">
+          <a href="#photo-section" class="btn-primary" id="hero-cta">
+            <span>Ankur Sir, click here</span>
+            <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span class="scroll-text">Scroll to explore</span>
+        <div class="mouse-wheel"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: PHOTO SECTION (SINGLE SQUARE MEMORY FRAME) -->
+    <section id="photo-section" class="section photo-section">
+      <div class="section-header">
+        <div class="section-tag">MEMORIES</div>
+        <h2 class="section-heading">One for the memories 📸</h2>
+      </div>
+
+      <div class="photo-card-container">
+        <div class="photo-card" id="photo-card">
+          <div class="photo-card-inner">
+            <div class="single-square-container">
+              <label for="photo-upload-single" class="single-square-frame" title="Click to upload/change photo (or save as images/photo.jpg)">
+                <div class="single-square-img-wrapper">
+                  <img id="featured-photo" src="images/photo.jpg" alt="Ankur Sir & Daksh Memory" />
+                  <div class="square-hover-overlay">
+                    <span>📷 Tap to change photo</span>
+                  </div>
+                </div>
+                <input type="file" id="photo-upload-single" accept="image/*" class="single-file-input" style="display: none;" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: THINGS WE HEAR IN MATHS CLASS -->
+    <section id="classroom-lines" class="section quotes-section">
+      <div class="section-header">
+        <div class="section-tag">CLASSROOM CHRONICLES</div>
+        <h2 class="section-heading">Things we hear in Maths class 😂</h2>
+        <p class="section-subtext">Click on any card to reveal what Ankur Sir actually thinks</p>
+      </div>
+
+      <div class="quotes-grid">
+        <!-- Card 1 -->
+        <div class="quote-card" data-sound="pop">
+          <div class="quote-card-header">
+            <span class="quote-icon">🙋‍♂️</span>
+            <span class="quote-speaker">Student</span>
+          </div>
+          <div class="quote-text">"Sir, ye question nahi ho raha."</div>
+          <div class="quote-reaction">
+            <span class="sir-badge">Ankur Sir's thought:</span>
+            <p class="sir-response">"Step 1 to theek se dekho pehle! Formula yaad kiya tha?" 🔍</p>
+          </div>
+        </div>
+
+        <!-- Card 2: TRIGONOMETRY SPECIAL -->
+        <div class="quote-card" data-sound="pop">
+          <div class="quote-card-header">
+            <span class="quote-icon">📐</span>
+            <span class="quote-speaker">Curious Student</span>
+          </div>
+          <div class="quote-text">"Sir, trigonometry real life mein kab use hogi?"</div>
+          <div class="quote-reaction">
+            <span class="sir-badge">Ankur Sir's reply:</span>
+            <p class="sir-response">"Building ki height, shadow ka angle aur video game physics mein sinθ hi chalta hai!" 🎮🏢</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="quote-card" data-sound="pop">
+          <div class="quote-card-header">
+            <span class="quote-icon">🔄</span>
+            <span class="quote-speaker">Entire Class</span>
+          </div>
+          <div class="quote-text">"Sir, ek baar aur samjha do."</div>
+          <div class="quote-reaction">
+            <span class="sir-badge">Ankur Sir's thought:</span>
+            <p class="sir-response">"Ye 4th time hai... par chalo firse suno dhyaan se." 😌</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="quote-card" data-sound="pop">
+          <div class="quote-card-header">
+            <span class="quote-icon">📑</span>
+            <span class="quote-speaker">Last Bencher</span>
+          </div>
+          <div class="quote-text">"Sir, ye syllabus mein hai?"</div>
+          <div class="quote-reaction">
+            <span class="sir-badge">Ankur Sir's thought:</span>
+            <p class="sir-response">"Exam mein 5 marks ka aayega, tab khud samajh aa jayega!" 📝</p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="quote-card" data-sound="pop">
+          <div class="quote-card-header">
+            <span class="quote-icon">🤔</span>
+            <span class="quote-speaker">Confused Soul</span>
+          </div>
+          <div class="quote-text">"Sir, ye answer kaise aaya?"</div>
+          <div class="quote-reaction">
+            <span class="sir-badge">Ankur Sir's thought:</span>
+            <p class="sir-response">"Plus (+) ki jagah minus (-) lagaya hai kisi ne beech mein..." 🧮</p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="quote-card" data-sound="pop">
+          <div class="quote-card-header">
+            <span class="quote-icon">⏰</span>
+            <span class="quote-speaker">Hungry Batch</span>
+          </div>
+          <div class="quote-text">"Sir bas ye last question."</div>
+          <div class="quote-reaction">
+            <span class="sir-badge">Ankur Sir's thought:</span>
+            <p class="sir-response">"Ek aur real-life concept clear kar lete hain, 5 minute aur." ⏱️</p>
+          </div>
+        </div>
+
+        <!-- Card 7: THE PLOT TWIST -->
+        <div class="quote-card plot-twist-card">
+          <div class="twist-glitch-badge">⚠️ UNIVERSAL TRUTH</div>
+          <div class="twist-body">
+            <h3 class="twist-title">Plot twist:</h3>
+            <p class="twist-punchline">Last question kabhi last nahi hota. 💀</p>
+          </div>
+          <div class="twist-footer">
+            <span>*Ankur Sir opens next page of RD Sharma with another real-life example*</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: SIR'S MATHS STATS -->
+    <section id="stats-section" class="section stats-section">
+      <div class="section-header">
+        <div class="section-tag">DASHBOARD & TELEMETRY</div>
+        <h2 class="section-heading">Ankur Sir's Maths Stats 🧮</h2>
+        <p class="section-subtext">Empirically measured over countless periods & real-life examples</p>
+      </div>
+
+      <div class="stats-grid">
+        <!-- Stat 1 -->
+        <div class="stat-card">
+          <div class="stat-icon-wrapper">
+            <span class="stat-symbol">∑</span>
+          </div>
+          <div class="stat-main">
+            <div class="stat-number infinity-glow">∞</div>
+            <div class="stat-label">Questions Solved</div>
+          </div>
+          <div class="stat-sub">From simple algebra to nightmare integration</div>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="stat-card highlight-card">
+          <div class="stat-icon-wrapper">
+            <span class="stat-symbol">📐</span>
+          </div>
+          <div class="stat-main">
+            <div class="stat-number infinity-glow">∞</div>
+            <div class="stat-label">Real-Life Trig Examples</div>
+          </div>
+          <div class="stat-sub">Building heights, shadow angles & GPS navigation</div>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="stat-card">
+          <div class="stat-icon-wrapper">
+            <span class="stat-symbol">🧘‍♂️</span>
+          </div>
+          <div class="stat-main">
+            <div class="stat-number" data-target="99.99" data-decimals="2" data-suffix="%">0%</div>
+            <div class="stat-label">Patience Level</div>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 99.99%;"></div>
+          </div>
+          <div class="stat-sub">Remaining 0.01% only when someone forgets minus sign</div>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="stat-card">
+          <div class="stat-icon-wrapper">
+            <span class="stat-symbol">❓</span>
+          </div>
+          <div class="stat-main">
+            <div class="stat-number" data-target="999" data-suffix="+">0</div>
+            <div class="stat-label">Doubts Cleared</div>
+          </div>
+          <div class="stat-sub">Always explained with intuitive real-world logic</div>
+        </div>
+
+        <!-- Stat 5 -->
+        <div class="stat-card">
+          <div class="stat-icon-wrapper">
+            <span class="stat-symbol">🔁</span>
+          </div>
+          <div class="stat-main">
+            <div class="stat-number" data-target="847" data-suffix="+">0</div>
+            <div class="stat-label">"Sir ek baar aur"</div>
+          </div>
+          <div class="stat-sub">And he still explains without losing his smile</div>
+        </div>
+
+        <!-- Stat 6 -->
+        <div class="stat-card">
+          <div class="stat-icon-wrapper">
+            <span class="stat-symbol">🧠</span>
+          </div>
+          <div class="stat-main">
+            <div class="stat-number infinity-glow">∞</div>
+            <div class="stat-label">Knowledge & Vibe</div>
+          </div>
+          <div class="stat-sub">Master of vectors, calculus & relatable examples</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: MINI MATH QUIZ -->
+    <section id="quiz-section" class="section quiz-section">
+      <div class="section-header">
+        <div class="section-tag">POP QUIZ TIME</div>
+        <h2 class="section-heading">Let's see if you actually learned something 👀</h2>
+        <p class="section-subtext">3 quick questions to test your attendance sincerity</p>
+      </div>
+
+      <div class="quiz-container">
+        <div class="quiz-progress-wrapper">
+          <div class="quiz-step-indicator">
+            <span class="quiz-step active" data-step="1">1</span>
+            <span class="quiz-line"></span>
+            <span class="quiz-step" data-step="2">2</span>
+            <span class="quiz-line"></span>
+            <span class="quiz-step" data-step="3">3</span>
+          </div>
+          <div class="quiz-score-badge">Score: <span id="quiz-score">0</span> / 3</div>
+        </div>
+
+        <!-- Question Cards Wrapper -->
+        <div class="quiz-cards-box">
+          <!-- Question 1 -->
+          <div class="quiz-question-card active" data-q="1">
+            <div class="quiz-q-number">Question 1 of 3</div>
+            <div class="quiz-q-text">Solve for <span class="math-variable">x</span>:</div>
+            <div class="quiz-equation-box">
+              <code>2x + 5 = 15</code>
+            </div>
+
+            <div class="quiz-options-grid">
+              <button class="quiz-opt-btn" data-correct="true" data-text="A) 5">
+                <span class="opt-key">A</span>
+                <span class="opt-val">5</span>
+              </button>
+              <button class="quiz-opt-btn" data-correct="false" data-text="B) 10">
+                <span class="opt-key">B</span>
+                <span class="opt-val">10</span>
+              </button>
+              <button class="quiz-opt-btn" data-correct="false" data-text="C) 7">
+                <span class="opt-key">C</span>
+                <span class="opt-val">7</span>
+              </button>
+              <button class="quiz-opt-btn sir-option" data-sir="true" data-text="D) Ankur Sir se pooch lo">
+                <span class="opt-key">D</span>
+                <span class="opt-val">Ankur Sir se pooch lo</span>
+              </button>
+            </div>
+
+            <div class="quiz-feedback" id="feedback-q1"></div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="quiz-question-card" data-q="2">
+            <div class="quiz-q-number">Question 2 of 3</div>
+            <div class="quiz-q-text">What is the derivative of a constant <span class="math-variable">c</span>?</div>
+            <div class="quiz-equation-box">
+              <code>d/dx (c) = ?</code>
+            </div>
+
+            <div class="quiz-options-grid">
+              <button class="quiz-opt-btn" data-correct="true" data-text="A) 0">
+                <span class="opt-key">A</span>
+                <span class="opt-val">0</span>
+              </button>
+              <button class="quiz-opt-btn" data-correct="false" data-text="B) 1">
+                <span class="opt-key">B</span>
+                <span class="opt-val">1</span>
+              </button>
+              <button class="quiz-opt-btn" data-correct="false" data-text="C) ∞">
+                <span class="opt-key">C</span>
+                <span class="opt-val">∞</span>
+              </button>
+              <button class="quiz-opt-btn sir-option" data-sir="true" data-text="D) Ankur Sir se pooch lo">
+                <span class="opt-key">D</span>
+                <span class="opt-val">Ankur Sir se pooch lo</span>
+              </button>
+            </div>
+
+            <div class="quiz-feedback" id="feedback-q2"></div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="quiz-question-card" data-q="3">
+            <div class="quiz-q-number">Question 3 of 3</div>
+            <div class="quiz-q-text">If a triangle has angles 60° and 70°, find the 3rd angle:</div>
+            <div class="quiz-equation-box">
+              <code>60° + 70° + θ = 180°</code>
+            </div>
+
+            <div class="quiz-options-grid">
+              <button class="quiz-opt-btn" data-correct="true" data-text="A) 50°">
+                <span class="opt-key">A</span>
+                <span class="opt-val">50°</span>
+              </button>
+              <button class="quiz-opt-btn" data-correct="false" data-text="B) 45°">
+                <span class="opt-key">B</span>
+                <span class="opt-val">45°</span>
+              </button>
+              <button class="quiz-opt-btn" data-correct="false" data-text="C) 60°">
+                <span class="opt-key">C</span>
+                <span class="opt-val">60°</span>
+              </button>
+              <button class="quiz-opt-btn sir-option" data-sir="true" data-text="D) Ankur Sir se pooch lo">
+                <span class="opt-key">D</span>
+                <span class="opt-val">Ankur Sir se pooch lo</span>
+              </button>
+            </div>
+
+            <div class="quiz-feedback" id="feedback-q3"></div>
+          </div>
+
+          <!-- Quiz Completion Result -->
+          <div class="quiz-results-card" id="quiz-results">
+            <div class="result-badge-icon">🎓</div>
+            <h3 class="result-title">Quiz Completed!</h3>
+            <p class="result-summary" id="result-summary-text"></p>
+            <div class="result-actions">
+              <button class="btn-secondary" id="restart-quiz-btn">Restart Quiz 🔄</button>
+              <a href="#final-section" class="btn-primary">Grand Finale →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: FINAL SECTION -->
+    <section id="final-section" class="section final-section">
+      <div class="final-container">
+        <!-- Floating infinity morph container -->
+        <div class="infinity-symbol-container" id="infinity-box">
+          <svg class="infinity-svg" viewBox="0 0 200 100">
+            <defs>
+              <linearGradient id="infinity-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#6366f1" />
+                <stop offset="50%" stop-color="#38bdf8" />
+                <stop offset="100%" stop-color="#10b981" />
+              </linearGradient>
+            </defs>
+            <path class="infinity-path" d="M 50,50 C 50,25 20,25 20,50 C 20,75 50,75 50,50 C 50,25 80,25 80,50 C 80,75 50,75 50,50" transform="scale(2, 1) translate(0, 0)" />
+          </svg>
+          <div class="fading-equations">
+            <span class="f-eq eq-1">sin²θ + cos²θ = 1</span>
+            <span class="f-eq eq-2">tan θ = h/d</span>
+            <span class="f-eq eq-3">∫ eˣ dx</span>
+            <span class="f-eq eq-4">lim (x → ∞)</span>
+          </div>
+        </div>
+
+        <h1 class="final-main-title">
+          Happy Teachers' Day, Ankur Sir! ❤️
+        </h1>
+
+        <p class="final-heartfelt-msg">
+          Thank you for being one of those teachers we'll genuinely remember.
+        </p>
+
+        <div class="final-signoff">
+          <div class="signoff-line"></div>
+          <div class="signoff-name">— Daksh</div>
+          <div class="signoff-line"></div>
+        </div>
+
+        <div class="final-button-row">
+          <button class="btn-primary pulse-glow" id="grand-celebration-btn">
+            <span>Celebrate Ankur Sir! 🎊</span>
+          </button>
+          <a href="#hero" class="btn-ghost">
+            <span>Back to top ↑</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Canvas Confetti Container -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
